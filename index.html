@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/stylz.css">
+    <script src="scripted.js" defer></script>
+
+    <title>Calculator</title>
+</head>
+<body>
+    <main>
+        <div class="wrapper js-calc-one" style="display: none;">
+            <div class="calculator calculator-1">
+                <div class="operand-output output">
+                    <input type="text" readonly class="display">
+                    <div class="screen-output display"></div>
+                </div>
+        
+                <div class="operand-input input">
+                    <button class="two-columns js-operationBtn">AC</button>
+                    <button class="js-button">Del</button>
+                    <button class="js-button">/</button>
+                    
+                    <button class="js-button">7</button>
+                    <button class="js-button">8</button>
+                    <button class="js-button">9</button>
+                    <button class="js-button">*</button>
+                    
+                    <button class="js-button">4</button>
+                    <button class="js-button">5</button>
+                    <button class="js-button">6</button>
+                    <button class="js-button">-</button>
+                    
+                    <button class="js-button">1</button>
+                    <button class="js-button">2</button>
+                    <button class="js-button">3</button>
+                    <button class="js-button">+</button>
+                    
+                    <button class="js-button">.</button>
+                    <button class="js-button">0</button>
+                    <button class="two-columns js-button" id="answer">=</button>
+                </div>
+            </div>
+            
+            <input type="button" value="Change View" class="view-button" data-screen-one>
+        </div>
+
+        <div class="wrapper js-calc-two">
+            <div class="calculator calculator-2">
+                <div class="calc-output output">
+                    <div data-sec-sceen class="secondary-screen display"></div>
+                    <div data-pri-screen class="primary-screen display"></div>
+                </div>
+        
+                <div class="calc-input input">
+                    <button data-clear-all class="two-columns">AC</button>
+                    <button data-delete>Del</button>
+                    <button data-operationBtn>/</button>
+                    
+                    <button data-numberBtn>7</button>
+                    <button data-numberBtn>8</button>
+                    <button data-numberBtn>9</button>
+                    <button data-operationBtn>*</button>
+                    
+                    <button data-numberBtn>4</button>
+                    <button data-numberBtn>5</button>
+                    <button data-numberBtn>6</button>
+                    <button data-operationBtn>-</button>
+                    
+                    <button data-numberBtn>1</button>
+                    <button data-numberBtn>2</button>
+                    <button data-numberBtn>3</button>
+                    <button data-operationBtn>+</button>
+                    
+                    <button data-numberBtn>.</button>
+                    <button data-numberBtn>0</button>
+                    <button class="two-columns" data-equals>=</button>
+                </div>
+            </div>
+
+            <input type="button" value="Change View" class="view-button" data-screen-two>
+        </div>
+    </main>
+</body>
+</html>
+
+<!--
+    1. for calculator-1 the calculator screen doesn't display anything, but if the output is logged {console.log()} the expected result displayed. The all clear (AC) button is also not working properly
+
+    2. The data-screen buttons are intended to change the calculator displayed on the window, ( i intended to use a single button, however i dont know how to) based on which ever is displayed. i used the change_screen() function. bottom line, its not working and i cant figure it out, how do i go about that?
+
+    3. a subtle issue, for calculator-2, when subtracting, the display shows the result as a negative number, even if a positive integer is expected as the result. how do i solve that?
+-->
